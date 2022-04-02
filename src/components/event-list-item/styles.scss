@@ -1,0 +1,27 @@
+@import 'styles/colors.scss';
+
+.event-list-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+
+  .default-button {
+    background-color: $color-white;
+    color: $color-black;
+    padding: 5px 0px;
+    height: inherit;
+
+    &.error {
+      color: $color-camelot;
+    }
+
+    &.success {
+      color: $color-paradiso;
+    }
+
+    svg {
+      height: 100%;
+    }
+  }
+}

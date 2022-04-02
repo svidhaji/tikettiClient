@@ -1,0 +1,71 @@
+{
+  "name": "tiketti-streaming-admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@popperjs/core": "^2.4.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "date-fns": "^2.28.0",
+    "express": "^4.17.3",
+    "lodash": "^4.17.19",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-spring": "^8.0.27",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^1.0.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "env-cmd": "^10.1.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "postcss": "^8.4.7",
+    "prettier": "2.5.1",
+    "sass": "^1.0.0",
+    "source-map-explorer": "^2.5.2",
+    "stylelint": "^14.5.3",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-scss": "^4.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "eslint": "eslint src",
+    "stylelint": "stylelint 'src/**/*.scss'",
+    "lint": "yarn eslint && yarn stylelint",
+    "lint:fix": "eslint . --fix",
+    "deploy:dev": "env-cmd -f ./.env.development yarn build --profile && env-cmd -f ./.env.development ./bin/deploy",
+    "deploy:staging": "env-cmd -f ./.env.staging yarn build --profile && env-cmd -f ./.env.staging ./bin/deploy",
+    "deploy:prod": "env-cmd -f ./.env.production yarn build && env-cmd -f ./.env.production ./bin/deploy"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

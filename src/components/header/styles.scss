@@ -1,0 +1,10 @@
+@import 'styles/colors.scss';
+
+.header-wrapper {
+  min-height: 50px;
+  background-color: $color-black;
+
+  .tiketti-icon-container {
+    padding: 10px;
+  }
+}

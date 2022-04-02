@@ -1,0 +1,35 @@
+@import 'styles/lib/include-media.scss';
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+@import 'styles/colors.scss';
+
+.ticket-wrapper {
+  .reset-wrapper {
+    height: 38px;
+    display: flex;
+
+    #reset-ticket-tooltip {
+      text-align: center;
+      background-color: $color-custom-white;
+      border: 1px solid black;
+      > #arrow:before {
+        background-color: $color-custom-white;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+      }
+    }
+
+    button {
+      height: 100%;
+      margin-left: 5px;
+
+      &.default-button {
+        padding: 10px 0px;
+      }
+
+      svg {
+        height: 100%;
+      }
+    }
+  }
+}

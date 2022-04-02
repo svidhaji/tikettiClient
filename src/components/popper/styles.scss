@@ -1,0 +1,48 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+@import 'styles/colors.scss';
+
+@mixin common-arrow-styles {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: -1;
+}
+
+.popper-wrapper {
+  @include font-fluid($width-min, $width-max, 9px, 13px);
+  min-width: 120px;
+  min-height: 15px;
+  background-color: $color-white;
+  z-index: 2;
+  padding: 6px;
+  color: $color-camelot;
+
+  > #arrow {
+    @include common-arrow-styles;
+
+    &::before {
+      @include common-arrow-styles;
+      content: '';
+      right: 12px;
+      transform: rotate(45deg);
+      background: $color-white;
+    }
+  }
+}
+
+.popper-wrapper[data-popper-placement^='top'] > #arrow {
+  bottom: -4px;
+}
+
+.popper-wrapper[data-popper-placement^='bottom'] > #arrow {
+  top: -4px;
+}
+
+.popper-wrapper[data-popper-placement^='left'] > #arrow {
+  right: -4px;
+}
+
+.popper-wrapper[data-popper-placement^='right'] > #arrow {
+  left: -4px;
+}

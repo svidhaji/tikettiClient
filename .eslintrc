@@ -1,0 +1,16 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-react"],
+  "globals": { "fetch": false },
+  "rules": {
+    "semi": [2, "always"],
+    "space-before-function-paren": [
+      2,
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ]
+  }
+}

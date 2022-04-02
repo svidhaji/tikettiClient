@@ -1,0 +1,13 @@
+.update-button {
+  align-items: center;
+  float: right;
+}
+
+.title {
+  float: left;
+}
+
+.list-container {
+  margin-bottom: 20px;
+  padding: 30px;
+}

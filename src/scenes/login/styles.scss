@@ -1,0 +1,45 @@
+@import 'styles/lib/include-media.scss';
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+@import 'styles/colors.scss';
+
+.login-wrapper {
+  max-width: $width-inner-content;
+  margin: auto;
+  text-align: center;
+  height: calc(100vh - 50px);
+  display: flex;
+
+  #password-tooltip {
+    background-color: $color-custom-white;
+    border: 1px solid black;
+    > #arrow:before {
+      background-color: $color-custom-white;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+    }
+  }
+
+  > .input-login-container {
+    max-width: 350px;
+    margin: auto;
+
+    input {
+      width: 100%;
+      height: 40px;
+      margin-top: 6px;
+      box-shadow: none;
+      border: 1px solid $color-grey;
+      text-indent: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+      height: 40px;
+      width: 130px;
+      > svg {
+        height: 100%;
+      }
+    }
+  }
+}

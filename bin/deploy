@@ -1,0 +1,5 @@
+#!/bin/bash
+
+aws s3 sync --delete build/ s3://${AWS_S3_BUCKET} --acl public-read --cache-control max-age=86400000,public
+
+aws cloudfront --profile ${AWS_PROFILE} create-invalidation --paths '/*' --distribution-id ${AWS_CLOUDFRONT_DISTRIBUTION_ID}
